@@ -1,3 +1,8 @@
+/*
+Author: Issa G Malke
+Date: April, 2, 2017
+*/
+
 #include<iostream>
 #include<cstdio>
 #include<sstream>

@@ -1,3 +1,8 @@
+/*
+Author: Issa G Malke
+Date: March, 23, 2017
+*/
+
 #include <iostream>
 #include <list>		//List is like Double Linked-List 
 #include <memory>	//This header defines general utilities to manage dynamic memory, Smart Ptr

@@ -1,3 +1,10 @@
+/*
+
+ DLL : DOUBLED LINKED LIST 
+_________________________
+By ISSA Gabriel Malke
+    Aug. 5, 2015
+*/
 #ifndef DLL_CPP
 #define DLL_CPP
 

@@ -1,3 +1,8 @@
+/*
+Author: Issa G Malke
+Date: March, 22, 2017
+*/
+
 #include "hashTable.h"
 
 hashTable::hashTable(){
