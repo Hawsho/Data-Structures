@@ -134,13 +134,11 @@ int main()
         cout << "\nThere is no path from " << u << " to " << v;
 
 // SWAPPING TO SEE IF THERE IS A PATH IN THE OPPOSITE DIRECTION!
-    int temp;	temp = u;
-    u = v;		v = temp;
 
-    if (g.isReachable(u, v))
-        cout << "\nThere is a path from " << u << " to " << v;
+    if (g.isReachable(v, u))
+        cout << "\nThere is a path from " << v << " to " << u;
     else
-        cout << "\nThere is no path from " << u << " to " << v;
+        cout << "\nThere is no path from " << v << " to " << u;
 
     return 0;
 }
