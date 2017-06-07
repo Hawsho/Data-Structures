@@ -1,6 +1,6 @@
 /*
-Author: Issa G Malke
-Date: March, 23, 2017
+	Author: Issa G Malke
+	Date: March, 23, 2017
 */
 
 #include <iostream>
@@ -15,17 +15,17 @@ using std::unique_ptr;	//Generic Ptr, Sole owner
 
 class Graph		// This class represents a directed graph using adjacency list representation
 {
-	private:
+    private:
         int V; 				// No. of vertices
         list<int> *adj; 		// Pointer to an array containing adjacency lists
     public:
         Graph(int V); 			// Init. Constructor
         void addEdge(int v, int w); 	// function to add an edge to graph
         bool isReachable(int s, int d); // returns true if there is a path from s to d
-		void _print();
+	void _print();
 };
 /*
- Create an Array of type List<int> allocated in Memory.
+ Create an Array[] of type List<int> allocated in Memory.
  The Array Index is representing a Node/Vertice, and the List<int> "Double linked-list"
  is chaining from each Index representing the Edges, that each Edge Number is a Node NOT
  the weight/Cost of the Edge. In other words, each Array index has its own List<int> that
@@ -48,16 +48,16 @@ void Graph::addEdge(int v, int w)
 }
 
 // A BFS based function to check whether (d) is reachable from (s).
-bool Graph::isReachable(int str, int des)	//str = Start, des = Destination
+bool Graph::isReachable(int str, int des)//str = Start, des = Destination
 {
-    if (str == des)	return true;	// Base case
+    if (str == des)	return true;	// Base case, Self Loop Node
 
-//  bool *visited = new bool[V];	//Need to be De-allocated; therefore, I used smart Ptr
+//  bool *visited = new bool[V];	//Need to be De-allocated; thus, I used smart Ptr
 	unique_ptr<bool[]> visited (new bool[V]);
 
     for (int i = 0; i < V; i++)	// Mark all the vertices as not visited
 	{
-        visited[i] = false;
+        	visited[i] = false;
 	}
 	// Create a queue for BFS
 	//This is NOT an Actual Queue, but the List STL provides similar functions.
@@ -78,7 +78,7 @@ bool Graph::isReachable(int str, int des)	//str = Start, des = Destination
 	_When the destination Node is Not found inside a List<int> of the Array[str],
 	It means the Destination Node is Not directly connected to the Source/Start Node;
 	Therefore, we enqueue the Source/Start Node Edges and visit each one of them to check
-	if they are connected to the Destination Node. That Explain wht we push_back these
+	if they are connected to the Destination Node. That Explain why we push_back these
 	Edges into the Queue, so we can pop_front one by one and check their List<int> through
 	a for Loop & an Iterator.
 	*/
